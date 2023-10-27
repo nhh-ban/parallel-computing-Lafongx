@@ -1,3 +1,6 @@
+
+### MTweedieTests function rewritten, split M simulations in more than one core
+
 # Assignment 1:  
 library(tweedie) 
 library(ggplot2)
@@ -11,7 +14,7 @@ simTweedieTest <-
   } 
 
 
-# Assignment 2:  
+# Assignment 2 rewritten  
 MTweedieTests <-  
   function(N,M,sig){ 
     sum(replicate(M,simTweedieTest(N)) < sig)/M 
