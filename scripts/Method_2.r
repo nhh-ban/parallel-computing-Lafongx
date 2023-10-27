@@ -2,14 +2,17 @@
 ### Final loop rewritten with parallel computing
 
 # Assignment 1:  
-install.packages("rtweedie")
+install.packages("tweedie")
+install.packages("parallel")
+install.packages("doParallel")
+install.packages("foreach")
 library(tweedie) 
 library(ggplot2)
 
 simTweedieTest <-  
   function(N){ 
     t.test( 
-      rtweedie(N, mu=10000, phi=100, power=1.9), 
+      tweedie::rtweedie(N, mu=10000, phi=100, power=1.9), 
       mu=10000 
     )$p.value 
   } 
@@ -32,8 +35,6 @@ df <-
 
 ### Parallel computing
 
-install.packages("parallel")
-install.packages("doParallel")
 library(parallel)
 library(doParallel)
 
