@@ -2,10 +2,6 @@
 ### Final loop rewritten with parallel computing
 
 # Assignment 1:  
-install.packages("tweedie")
-install.packages("parallel")
-install.packages("doParallel")
-install.packages("foreach")
 library(tweedie) 
 library(ggplot2)
 
